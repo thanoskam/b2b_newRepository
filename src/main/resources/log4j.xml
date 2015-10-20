@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+
+<log4j:configuration debug="false">
+
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="FILE_APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/home/thanoskam/logs/myapp2.log"/>
+        <param name="DatePattern" value="'-'yyyy-MM-dd'.txt'"/>
+        <param name="Threshold" value="DEBUG"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-4p [%t] %C{2} - %m%n"/>
+        </layout>
+    </appender>
+    
+    <!-- 
+		<appender name="DATABASE_APPENDER" class="org.apache.log4j.jdbc.JDBCAppender">
+		   <param name="url" value="jdbc:mysql://localhost/greekchoices_backend_jpa"/>
+		   <param name="driver" value="com.mysql.jdbc.Driver"/>
+		   <param name="user" value="root"/>
+		   <param name="password" value="SOURTAFERTA"/>
+		   <param name="sql" value="INSERT INTO LOGS VALUES('%x','%d','%C','%p','%m')"/>
+		   
+		   <layout class="org.apache.log4j.PatternLayout">
+		   </layout>
+		</appender>    
+	  -->
+	
+    <!-- Spring -->
+    <logger name="org.springframework" additivity="false">
+        <!--
+        <level value="DEBUG"/>
+        <appender-ref ref="FILE_APPENDER"/> 
+        -->
+        <level value="ERROR"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    
+    <logger name="gr.com.eurotrade" additivity="false">
+        <!-- <level value="INFO"/> -->
+         <appender-ref ref="CONSOLE"/>
+    </logger>    
+
+    <root>
+        <level value="DEBUG"/>
+        <appender-ref ref="FILE_APPENDER"/>
+    </root>
+</log4j:configuration>

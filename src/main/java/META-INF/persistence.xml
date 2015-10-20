@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	
+	<persistence-unit name="b2b-sales">
+		<class>gr.com.eurotrade.entity.AddressType</class>
+		<class>gr.com.eurotrade.entity.Blog</class>
+		<class>gr.com.eurotrade.entity.Branch</class>
+		<class>gr.com.eurotrade.entity.Brand</class>
+		<class>gr.com.eurotrade.entity.Category</class>
+		<class>gr.com.eurotrade.entity.CategoryInfo</class>
+		<class>gr.com.eurotrade.entity.CategoryInfoPK</class>
+		<class>gr.com.eurotrade.entity.CategoryTranslation</class>
+		<class>gr.com.eurotrade.entity.CategoryTranslationPK</class>
+		<class>gr.com.eurotrade.entity.City</class>
+		<class>gr.com.eurotrade.entity.Company</class>
+		<class>gr.com.eurotrade.entity.CompanyAddress</class>
+		<class>gr.com.eurotrade.entity.CompanyAddressPK</class>
+		<class>gr.com.eurotrade.entity.Country</class>
+		<class>gr.com.eurotrade.entity.Currency</class>
+		<class>gr.com.eurotrade.entity.Delay</class>
+		<class>gr.com.eurotrade.entity.DelayPK</class>
+		<class>gr.com.eurotrade.entity.DiscountLine</class>
+		<class>gr.com.eurotrade.entity.DownloadCat</class>
+		<class>gr.com.eurotrade.entity.Item</class>
+		<class>gr.com.eurotrade.entity.OperationType</class>
+		<class>gr.com.eurotrade.entity.OrderStatus</class>
+		<class>gr.com.eurotrade.entity.PartType</class>
+		<class>gr.com.eurotrade.entity.PreorderStatus</class>
+		<class>gr.com.eurotrade.entity.Product</class>
+		<class>gr.com.eurotrade.entity.ProductPart</class>
+		<class>gr.com.eurotrade.entity.ProductPartPK</class>
+		<class>gr.com.eurotrade.entity.ProductPrice</class>
+		<class>gr.com.eurotrade.entity.ProductPricePK</class>
+		<class>gr.com.eurotrade.entity.ProductTranslation</class>
+		<class>gr.com.eurotrade.entity.ProductTranslationPK</class>
+		<class>gr.com.eurotrade.entity.Region</class>
+		<class>gr.com.eurotrade.entity.Role</class>
+		<class>gr.com.eurotrade.entity.SellerHasCustomer</class>
+		<class>gr.com.eurotrade.entity.SellerHasCustomerPK</class>
+		<class>gr.com.eurotrade.entity.Size</class>
+		<class>gr.com.eurotrade.entity.State</class>
+		<class>gr.com.eurotrade.entity.TestAttribute</class>
+		<class>gr.com.eurotrade.entity.TestBranch</class>
+		<class>gr.com.eurotrade.entity.TestProduct</class>
+		<class>gr.com.eurotrade.entity.User</class>
+		<class>gr.com.eurotrade.entity.UserBrand</class>
+		<class>gr.com.eurotrade.entity.UserBrandPK</class>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		
+<!-- 		<properties>
+			<property name="javax.persistence.jdbc.url" 
+		   value="jdbc:mysql://localhost:3306/b2b?useUnicode=yes&amp;characterEncoding=UTF-8"/>
+		</properties>
+ -->		
+	</persistence-unit>
+	
+</persistence>

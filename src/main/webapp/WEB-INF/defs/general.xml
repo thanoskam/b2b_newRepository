@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+  <definition name="common" template="/WEB-INF/layout/classic.jsp">
+    <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+  </definition>
+  
+  <!-- index -->
+  <definition name="index" extends="common">
+    <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />    
+    <put-attribute name="title" value="B2B Sales" />
+    <put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
+    <put-attribute name="current" value="index" />
+  </definition>
+  
+  <!-- login -->
+  <definition name="login" extends="common">
+    <put-attribute name="title" value="login" />
+    <put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+    <put-attribute name="current" value="login" />
+  </definition>
+
+	<!--  Home (Starts) -->
+  <definition name="home" extends="common">
+    <put-attribute name="title" value="Home" cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/home.jsp" />
+    <put-attribute name="current" value="home" cascade="true"/>
+  </definition>
+	<!--  Home (Ends) -->
+
+
+  <!-- products -->
+  <definition name="products" extends="common">
+    <put-attribute name="title" value="Products" />
+    <put-attribute name="body" value="/WEB-INF/jsp/application/product/products.jsp" />
+    <put-attribute name="current" value="products" />
+  </definition>
+
+  <!-- product-detail -->
+  <definition name="product-detail" extends="common">
+    <put-attribute name="title" value="Product detail" />
+    <put-attribute name="body" value="/WEB-INF/jsp/application/product/product-detail.jsp" />
+    <put-attribute name="current" value="products" />
+  </definition>
+
+  <!-- Country (Starts) -->	
+  <definition name="countryListing" extends="common">
+    <put-attribute name="title" value="Country Listing" cascade="true"/>
+    <put-attribute name="descr" value="Country Listing." cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/country/countryListing.jsp" />
+<!--     <put-attribute name="breadcrumbPairs" expression="[Hotels Listing,]" cascade="true" />     -->
+<!--     <put-attribute name="upLevel" value="/admin/home.html" cascade="true"/> -->
+    <put-attribute name="current" value="countryListing" cascade="true" />
+  </definition>
+ 
+  <definition name="countryEdit" extends="common">
+    <put-attribute name="title" value="Country Edit" cascade="true"/>
+    <put-attribute name="descr" value="Country Edit." cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/country/countryEdit.jsp" />
+	<!--     <put-attribute name="breadcrumbPairs" expression="[Hotels Listing,]" cascade="true" />     -->
+	<!--     <put-attribute name="upLevel" value="/admin/home.html" cascade="true"/> -->
+    <put-attribute name="current" value="countryEdit" cascade="true" />
+  </definition>
+  	<!-- Country (Ends) -->
+ 
+   <!-- Region (Starts) -->	
+  <definition name="regionListing" extends="common">
+    <put-attribute name="title" value="Region Listing" cascade="true"/>
+    <put-attribute name="descr" value="Region Listing." cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/region/regionListing.jsp" />
+<!--     <put-attribute name="breadcrumbPairs" expression="[Hotels Listing,]" cascade="true" />     -->
+<!--     <put-attribute name="upLevel" value="/admin/home.html" cascade="true"/> -->
+    <put-attribute name="current" value="regionListing" cascade="true" />
+  </definition>
+ 
+  <definition name="regionEdit" extends="common">
+    <put-attribute name="title" value="Region Edit" cascade="true"/>
+    <put-attribute name="descr" value="Region Edit." cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/region/regionEdit.jsp" />
+	<!--     <put-attribute name="breadcrumbPairs" expression="[Hotels Listing,]" cascade="true" />     -->
+	<!--     <put-attribute name="upLevel" value="/admin/home.html" cascade="true"/> -->
+    <put-attribute name="current" value="regionEdit" cascade="true" />
+  </definition>
+  	<!-- Region (Ends) -->
+ 
+   <!-- State (Starts) -->	
+  <definition name="stateListing" extends="common">
+    <put-attribute name="title" value="State Listing" cascade="true"/>
+    <put-attribute name="descr" value="State Listing." cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/state/stateListing.jsp" />
+<!--     <put-attribute name="breadcrumbPairs" expression="[Hotels Listing,]" cascade="true" />     -->
+<!--     <put-attribute name="upLevel" value="/admin/home.html" cascade="true"/> -->
+    <put-attribute name="current" value="stateListing" cascade="true" />
+  </definition>
+ 
+  <definition name="stateEdit" extends="common">
+    <put-attribute name="title" value="State Edit" cascade="true"/>
+    <put-attribute name="descr" value="State Edit." cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/state/stateEdit.jsp" />
+	<!--     <put-attribute name="breadcrumbPairs" expression="[Hotels Listing,]" cascade="true" />     -->
+	<!--     <put-attribute name="upLevel" value="/admin/home.html" cascade="true"/> -->
+    <put-attribute name="current" value="stateEdit" cascade="true" />
+  </definition>
+  	<!-- State (Ends) -->
+ 
+   <!-- City (Starts) -->	
+  <definition name="cityListing" extends="common">
+    <put-attribute name="title" value="City Listing" cascade="true"/>
+    <put-attribute name="descr" value="City Listing." cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/city/cityListing.jsp" />
+<!--     <put-attribute name="breadcrumbPairs" expression="[Hotels Listing,]" cascade="true" />     -->
+<!--     <put-attribute name="upLevel" value="/admin/home.html" cascade="true"/> -->
+    <put-attribute name="current" value="cityListing" cascade="true" />
+  </definition>
+ 
+  <definition name="cityEdit" extends="common">
+    <put-attribute name="title" value="City Edit" cascade="true"/>
+    <put-attribute name="descr" value="City Edit." cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/city/cityEdit.jsp" />
+	<!--     <put-attribute name="breadcrumbPairs" expression="[Hotels Listing,]" cascade="true" />     -->
+	<!--     <put-attribute name="upLevel" value="/admin/home.html" cascade="true"/> -->
+    <put-attribute name="current" value="cityEdit" cascade="true" />
+  </definition>
+  	<!-- City (Ends) -->
+  
+	<!-- Currency (Starts) -->	
+  <definition name="currencyListing" extends="common">
+    <put-attribute name="title" value="Currency Listing" cascade="true"/>
+    <put-attribute name="descr" value="Currency Listing." cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/currency/currencyListing.jsp" />
+<!--     <put-attribute name="breadcrumbPairs" expression="[Hotels Listing,]" cascade="true" />     -->
+<!--     <put-attribute name="upLevel" value="/admin/home.html" cascade="true"/> -->
+    <put-attribute name="current" value="currencyListing" cascade="true" />
+  </definition>
+
+  <definition name="currencyEdit" extends="common">
+    <put-attribute name="title" value="Currency Edit" cascade="true"/>
+    <put-attribute name="descr" value="Currency Edit." cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/currency/currencyEdit.jsp" />
+	<!--     <put-attribute name="breadcrumbPairs" expression="[Hotels Listing,]" cascade="true" />     -->
+	<!--     <put-attribute name="upLevel" value="/admin/home.html" cascade="true"/> -->
+    <put-attribute name="current" value="currencyEdit" cascade="true" />
+  </definition>
+  	<!-- Currency (Ends) -->
+  
+     <!-- Company (Starts) -->	
+  <definition name="companyListing" extends="common">
+    <put-attribute name="title" value="Company Listing" cascade="true"/>
+    <put-attribute name="descr" value="Company Listing." cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/company/companyListing.jsp" />
+<!--     <put-attribute name="breadcrumbPairs" expression="[Hotels Listing,]" cascade="true" />     -->
+<!--     <put-attribute name="upLevel" value="/admin/home.html" cascade="true"/> -->
+    <put-attribute name="current" value="companyListing" cascade="true" />
+  </definition>
+ 
+  <definition name="companyEdit" extends="common">
+    <put-attribute name="title" value="Company Edit" cascade="true"/>
+    <put-attribute name="descr" value="Company Edit." cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/company/companyEdit.jsp" />
+	<!--     <put-attribute name="breadcrumbPairs" expression="[Hotels Listing,]" cascade="true" />     -->
+	<!--     <put-attribute name="upLevel" value="/admin/home.html" cascade="true"/> -->
+    <put-attribute name="current" value="companyEdit" cascade="true" />
+  </definition>
+  	<!-- Company (Ends) -->
+ 
+  <!-- Company Info (Starts) -->	  
+  <definition name="companyInfoRead" extends="common">
+    <put-attribute name="title" expression="${company.name} Info" cascade="true"/>
+    <put-attribute name="descr" value="Company's details." cascade="true"/>
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/company/companyInfoRead.jsp" />
+<!--     <put-attribute name="breadcrumbPairs" expression="[Hotels Listing,/admin/hotels.html]|[Hotel Control Panel,/admin/hotels/${hotel.id}/control_panel.html]|[Hotel Basic Info,]" cascade="true" /> -->
+<!--     <put-attribute name="upLevel" expression="/admin/hotels/${hotel.id}/control_panel.html" cascade="true"/> -->
+    <put-attribute name="current" value="companyInfoRead" cascade="true" />
+  </definition>  
+  <!-- Company Info (Ends) -->
+  
+  
+<!--   ============================ TUTORIAL BEGINS ============================ -->
+  
+    <!-- Users -->
+  <definition name="users" extends="common">
+    <put-attribute name="title" value="Users" />
+    <put-attribute name="body" value="/WEB-INF/jsp/turorial/users.jsp" />
+    <put-attribute name="current" value="users" />
+  </definition>
+
+  <!-- user-detail -->
+  <definition name="user-detail" extends="common">
+    <put-attribute name="title" value="User detail" />
+    <put-attribute name="body" value="/WEB-INF/jsp/turorial/user-detail.jsp" />
+    <put-attribute name="current" value="users" />
+  </definition>
+
+  <!-- account -->
+  <definition name="account" extends="common">
+    <put-attribute name="title" value="User account" />
+    <put-attribute name="body" value="/WEB-INF/jsp/turorial/user-account.jsp" />
+    <put-attribute name="current" value="account" />
+  </definition>
+
+  <!-- user-register -->
+  <definition name="user-register" extends="common">
+    <put-attribute name="title" value="User registration" />
+    <put-attribute name="body" value="/WEB-INF/jsp/turorial/user-register.jsp" />
+    <put-attribute name="current" value="register" />
+  </definition>
+
+  <!--   ============================ TUTORIAL ENDS ============================ -->
+  
+   <!-- Test -->
+<!--   <definition name="test" extends="common">
+    <put-attribute name="title" value="test" />
+    <put-attribute name="body" value="/WEB-INF/jsp/table-filter.jsp" />
+    <put-attribute name="current" value="test" />
+  </definition>
+ -->
+   <definition name="test" extends="common">
+    <put-attribute name="title" value="test" />
+    <put-attribute name="body" value="/WEB-INF/jsp/test-list-map.jsp" />
+    <put-attribute name="current" value="test" />
+  </definition>
+ 
+ </tiles-definitions>
