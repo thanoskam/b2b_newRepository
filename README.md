@@ -1,2 +1,2 @@
-# b2b_newRepository
+# b2b_salesRep
 b2b sales project
